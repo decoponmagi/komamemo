@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob:; worker-src 'self' blob:; connect-src 'self' data: blob:; manifest-src 'self'" />
+  <title>コマメモ</title>
+  <meta name="description" content="無限キャンバスのメモ＆漫画・アニメお絵かきアプリ（iPad / Apple Pencil 対応）" />
+  <meta name="theme-color" content="#eceef1" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#2a2c30" media="(prefers-color-scheme: dark)" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="コマメモ" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- drawing surface: canvases are created / sized by core/app.ts -->
+  <div id="stage">
+    <canvas id="main"></canvas>
+    <canvas id="live"></canvas>
+    <canvas id="overlay"></canvas>
+    <div id="dom-layer"></div>
+  </div>
+  <!-- UI chrome (toolbars, dock, panels, toasts) built by src/ui -->
+  <div id="ui"></div>
+  <script src="dist/renderer.js"></script>
+</body>
+</html>
